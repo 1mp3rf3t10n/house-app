@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#0b0b0d"/>
+<link rel="manifest" href="/manifest.json" crossorigin="use-credentials"/>
+<link rel="apple-touch-icon" href="/assets/icons/icon-192.png"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="application-name" content="HOUSE"/>
+<title>HOUSE</title>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brandmark">H</div>
+      <div class="brand-copy">
+        <div class="brandtitle">HOUSE</div>
+        <div class="brandsub">private household</div>
+      </div>
+    </div>
+    <button class="room active" data-room="house">
+      <div class="house-avatar">11</div>
+      <div class="room-copy"><strong>House</strong><span>Group chat</span></div>
+    </button>
+    <div class="section-title">Individual chats</div>
+    <div id="characterList"></div>
+  </aside>
+
+  <main class="chat">
+    <header class="chat-header">
+      <div class="header-left">
+        <img id="headerAvatar" class="header-avatar" src="/assets/avatars/grace.jpg" alt=""/>
+        <div>
+          <div id="headerTitle" class="header-title">House</div>
+          <div id="headerStatus" class="header-status">11 members</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="installBtn" class="icon-btn" title="Install HOUSE" style="display:none">⬇</button>
+        <button id="voiceToggle" class="icon-btn" title="Read character replies aloud">🔊</button>
+        <button id="clearChat" class="icon-btn" title="Clear this chat">🗑</button>
+      </div>
+    </header>
+
+    <section id="messages" class="messages"></section>
+    <section id="attachmentPreview" class="attachment-preview hidden"></section>
+
+    <footer class="composer">
+      <button id="attachBtn" class="composer-btn" title="Image or video">＋</button>
+      <input id="fileInput" type="file" accept="image/*,video/*" hidden/>
+      <button id="recordBtn" class="composer-btn" title="Voice message">🎙</button>
+      <textarea id="textInput" rows="1" placeholder="Message House"></textarea>
+      <button id="sendBtn" class="send-btn">Send</button>
+    </footer>
+  </main>
+</div>
+<script src="/app.js"></script>
+<script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e=>{
+  e.preventDefault(); deferredPrompt=e;
+  const b=document.getElementById('installBtn'); b.style.display='inline-grid';
+  b.onclick=async()=>{ deferredPrompt.prompt(); await deferredPrompt.userChoice; b.style.display='none'; };
+});
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('/service-worker.js', { scope: '/' }));
+}
+</script>
+</body>
+</html>

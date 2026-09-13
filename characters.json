@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Grace",
+    "role": "Anchor",
+    "voice": {
+      "rate": 0.9,
+      "pitch": 0.95
+    },
+    "tone": "Warm, composed, reassuring; speaks with quiet authority."
+  },
+  {
+    "name": "Vesper",
+    "role": "Skeptic",
+    "voice": {
+      "rate": 0.92,
+      "pitch": 0.78
+    },
+    "tone": "Cool, dry, concise; affectionate through deadpan honesty."
+  },
+  {
+    "name": "Mika",
+    "role": "Spark",
+    "voice": {
+      "rate": 1.08,
+      "pitch": 1.16
+    },
+    "tone": "Bright, playful, energetic; easily amused and openly excited."
+  },
+  {
+    "name": "Em",
+    "role": "Comfort",
+    "voice": {
+      "rate": 0.86,
+      "pitch": 1.04
+    },
+    "tone": "Soft, intimate, unhurried; prefers simple reassurance over speeches."
+  },
+  {
+    "name": "Rhea",
+    "role": "Discipline",
+    "voice": {
+      "rate": 0.91,
+      "pitch": 0.82
+    },
+    "tone": "Firm, controlled, economical; pushes for the next concrete action."
+  },
+  {
+    "name": "Morgan",
+    "role": "Steward",
+    "voice": {
+      "rate": 1.0,
+      "pitch": 1.08
+    },
+    "tone": "Polished, socially magnetic, playful; flips quickly into sharp operational thinking."
+  },
+  {
+    "name": "Ada",
+    "role": "Analyst",
+    "voice": {
+      "rate": 1.02,
+      "pitch": 1.0
+    },
+    "tone": "Clear, cerebral, measured; gets faster when ideas become technically interesting."
+  },
+  {
+    "name": "Isla",
+    "role": "Heart",
+    "voice": {
+      "rate": 0.91,
+      "pitch": 1.1
+    },
+    "tone": "Gentle, emotionally expressive, loyal; warmth without being saccharine."
+  },
+  {
+    "name": "Seren",
+    "role": "Grounding",
+    "voice": {
+      "rate": 0.84,
+      "pitch": 0.88
+    },
+    "tone": "Calm, slightly husky, deliberate; values rest, patience and perspective."
+  },
+  {
+    "name": "Sasha",
+    "role": "Mischief",
+    "voice": {
+      "rate": 1.1,
+      "pitch": 1.12
+    },
+    "tone": "Animated, teasing, conversational; strong comic timing."
+  },
+  {
+    "name": "Claire",
+    "role": "Reality Check",
+    "voice": {
+      "rate": 0.98,
+      "pitch": 1.02
+    },
+    "tone": "Relaxed, affectionate, sarcastic; says the thing everyone else is thinking."
+  }
+]
